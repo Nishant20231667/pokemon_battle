@@ -16,7 +16,6 @@ class StartBattleView(APIView):
             pokemon_a = Pokemon.objects.get(name__iexact=pokemon_a_name)
             pokemon_b = Pokemon.objects.get(name__iexact=pokemon_b_name)
 
-            # Create a new battle record with a generated UUID
             battle = Battle.objects.create(
                 id=uuid.uuid4(),
                 pokemon_a=pokemon_a,
@@ -24,7 +23,6 @@ class StartBattleView(APIView):
                 status='BATTLE_STARTED'
             )
             
-            # Pass the battle ID and Pokémon names to the task
             start_battle_task.delay(str(battle.id), pokemon_a.name, pokemon_b.name)
             
             return Response({"battle_id": battle.id}, status=status.HTTP_201_CREATED)
