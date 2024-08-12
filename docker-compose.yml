@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  notification_service:
+    build: .
+    image: pokemon_battle
+    container_name: pokemon_battle
+    restart: "always"
+    command: "./entrypoint.sh"
+    volumes:
+      - ./:/code
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    network_mode: host

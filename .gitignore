@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+#Environ
+.env
+
+
+#log files
+*.log
+logs/
+
+#static
+static/
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pycharm project files
+.idea/
+*.idea/*
+
+# PyTest cache
+.pytest_cache/
+
+# Coverage
+.coverage
+coverage.xml
+
+# Tox
+.tox/
+.cache/
+.python-version
+
+# VirtualEnv
+*env/
+
+# Developers
+*.sw*
+manage.py
+.DS_Store
+
+# Database
+db.sqlite3
+
+#migrations
+*/migrations/*
+
